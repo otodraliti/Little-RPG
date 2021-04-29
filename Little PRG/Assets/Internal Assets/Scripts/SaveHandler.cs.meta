@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f72cb5e3c69d452429ee5178f10e02ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _chosenClass: {instanceID: 0}
+  - _KnightSprite: {fileID: 21300014, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
+  - _CheifSprite: {fileID: 21300008, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
+  - _HammerSprite: {fileID: 21300010, guid: e48ddf4fb7304ce4ab48711eb6617a57, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
