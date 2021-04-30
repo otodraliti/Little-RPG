@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
 
 
     public List<GameObject> ActionPrefabs;
+    public List<GameObject> BoosterPrafabs;
+
     public GameObject RowPrefab;
 
     // seted from sets
@@ -345,6 +347,19 @@ public class GameManager : MonoBehaviour
                             if (bc.gameObject.transform.GetChild(0).tag == "Healing")
                             {
                                 Action.PlayerHealing();
+                            }
+
+                            if (bc.gameObject.transform.GetChild(0).tag == "SwordShield")
+                            {
+                                Action.PlayerSwordShield();
+                            }
+                            if (bc.gameObject.transform.GetChild(0).tag == "SwordHeal")
+                            {
+                                Action.PlayerSwordHeal();
+                            }
+                            if (bc.gameObject.transform.GetChild(0).tag == "ShieldHeal")
+                            {
+                                Action.PlayerDefHeal();
                             }
                             ChoseEnable = false;
                         }

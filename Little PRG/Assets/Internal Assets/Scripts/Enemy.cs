@@ -7,8 +7,11 @@ public class Enemy : MonoBehaviour
 {
     public Sprite Ghost;
     public Sprite Dummy;
+    public Sprite Boss;
 
     public GameObject CurrentEnemy;
+    public GameObject BoosterUI;
+
 
 
     public int EnemyID;
@@ -73,15 +76,42 @@ public class Enemy : MonoBehaviour
     {
         if (isDead == true)
         {
-            WinCondition += 1;
-            Win();
-            RandomEnemy();
+            if (WinCondition < 3)
+            {
+                WinCondition += 1;
+                Win();
+                if (WinCondition <= 1)
+                {
+                    RandomEnemy();
+                }
+                else
+                {
+                    BoosEnemy();
+                }
+            }
+            else
+            {
+                BoosterUI.SetActive(true);
+            }
         }
     }
+    public void BoosEnemy()
+    {
+        EnemyName = "Boss";
+        MaxHP = 50;
+        CurHP = MaxHP;
+        AttackPower = 5;
+        DeffensePowwer = 5;
+        ActionsAvable = 2;
+        curDeffence = 0;
+        CurrentEnemy.gameObject.GetComponent<SpriteRenderer>().sprite = Boss;
+        isDead = false;
+    }
+
 
     public void Win()
     {
-        if (WinCondition == 2)
+        if (WinCondition == 3)
         {
             isWin = true;
         }

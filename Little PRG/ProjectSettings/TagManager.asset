@@ -10,6 +10,11 @@ TagManager:
   - Left
   - Mid
   - Right
+  - FxTemporaire
+  - GameManager
+  - SwordShield
+  - SwordHeal
+  - ShieldHeal
   layers:
   - Default
   - TransparentFX

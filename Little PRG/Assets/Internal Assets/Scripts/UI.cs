@@ -60,8 +60,8 @@ public class UI : MonoBehaviour
         }
         if (Enemy.isWin == true)
         {
-            GameUI.gameObject.SetActive(false);
-            WinUI.gameObject.SetActive(true);
+            //GameUI.gameObject.SetActive(false);
+            //WinUI.gameObject.SetActive(true);
         }
     }
 

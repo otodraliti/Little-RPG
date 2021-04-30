@@ -60,7 +60,6 @@ public class Actions : MonoBehaviour
                 if (EactionDelay < 0)
                 {
                     int RandomAtack = Random.Range(0, 2);
-                    Debug.Log(RandomAtack);
                     if (RandomAtack == 0)
                     {
                         EnemyAtack();
@@ -144,6 +143,22 @@ public class Actions : MonoBehaviour
 
     }
 
+
+    public void PlayerSwordShield()
+    {
+        PlayerAtack();
+        PlayerDef();
+    }
+    public void PlayerSwordHeal()
+    {
+        PlayerAtack();
+        PlayerHealing();
+    }
+    public void PlayerDefHeal()
+    {
+        PlayerDef();
+        PlayerHealing();
+    }
 
 
     public void PlayerHealing()
